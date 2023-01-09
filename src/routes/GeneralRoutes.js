@@ -1,16 +1,16 @@
 import React from "react"
 import { Routes, Route } from "react-router-dom"
-import Login from "pages/Auth/Login"
+import Home from "pages/Home"
 
 
-function AuthRoutes() {
+function GeneralRoutes() {
   return (
         <>
           <Routes> 
-            <Route path='/login' element={<Login />} />
+            <Route path='/' element={<Home />} />
           </Routes>
         </>
   )
 }
 
-export default AuthRoutes
+export default GeneralRoutes

@@ -1,9 +1,9 @@
-import Routes from "./routes/Routes";
+import RouterProvider from "providers/RouterProvider";
 
 function App() {
   return (
     <div className="App">
-      <Routes />
+      <RouterProvider />
     </div>
   );
 }
