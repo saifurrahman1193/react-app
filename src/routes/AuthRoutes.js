@@ -1,15 +1,12 @@
-import React from "react"
-import { Routes, Route } from "react-router-dom"
-import Login from "pages/Auth/Login"
-import {RouteLinks} from "constants/RouteLinks"
+import {lazy} from "react";
 
+const Login = lazy(()=> import('pages/Auth/Login'));
 
-function AuthRoutes() {
-  return (
-    <Routes>
-      <Route path={RouteLinks?.login} element={<Login />} />
-    </Routes>
-  )
-}
+const AuthRoutes = [
+  {
+    path: '/',
+    component: Login,
+  }
+];
 
 export default AuthRoutes

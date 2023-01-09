@@ -33,4 +33,7 @@
 2. Absolute Imports
    1. https://medium.com/geekculture/making-life-easier-with-absolute-imports-react-in-javascript-and-typescript-bbdab8a8a3a1 
 3. Router
-   1. https://blog.webdevsimplified.com/2022-07/react-router/
+   1. https://www.youtube.com/watch?v=OMQ2QARHPo0&list=PL4cUxeGkcC9iVKmtNuCeIswnQ97in2GGf
+   2. https://www.youtube.com/watch?v=WfpmvgVZD1A&list=PL4cUxeGkcC9h7F1LWaQ7MAI8ptg5VjvxJ
+   3. 
+   4. https://blog.webdevsimplified.com/2022-07/react-router/

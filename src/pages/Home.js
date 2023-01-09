@@ -7,6 +7,7 @@ function Home() {
     <>
         <h1>Home Page</h1>
         <Link to={RouteLinks?.login}>Login</Link>
+        <br /><Link to='/sadadasdasd'>Error page</Link>
     </>
   )
 }
