@@ -5,7 +5,7 @@ const AuthLayout = lazy(()=>import('layouts/AuthLayout'))
 function App() {
   return (
     <Routes>
-      <Route path="auth/*" element={<AuthLayout />} />
+      <Route path="/auth/*" element={<AuthLayout />} />
     </Routes>
   )
 }
