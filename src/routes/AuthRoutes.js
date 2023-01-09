@@ -6,28 +6,10 @@ const ForgotPasswordCodeVerify = lazy(() => import('pages/Auth/ForgotPasswordCod
 const PasswordReset = lazy(() => import('pages/Auth/PasswordReset'));
 
 const AuthRoutes = [
-  {
-    path: 'login',
-    name: 'login',
-    component: Login,
-  },
-  {
-    path: 'forgot-password',
-    name: 'forgot-password',
-    component: ForgotPassword,
-  },
-  {
-    path: 'forgot-password-code-verify',
-    name: 'forgot-password-code-verify',
-    component: ForgotPasswordCodeVerify,
-  },
-  {
-    path: 'password-reset',
-    name: 'password-reset',
-    component: PasswordReset,
-  }
-
-
+  { path: 'login', name: 'login', component: Login },
+  { path: 'forgot-password', name: 'forgot-password', component: ForgotPassword },
+  { path: 'forgot-password-code-verify', name: 'forgot-password-code-verify', component: ForgotPasswordCodeVerify },
+  { path: 'password-reset', name: 'password-reset', component: PasswordReset }
 ];
 
 export default AuthRoutes
