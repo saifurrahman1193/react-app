@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {lazy} from 'react'
 import { Routes, Route } from 'react-router-dom'
-import AuthLayout from 'layouts/AuthLayout'
+const AuthLayout = lazy(()=>import('layouts/AuthLayout'))
 
 function App() {
   return (
     <Routes>
-      <Route path="/auth/*" element={<AuthLayout />} />
+      <Route path="auth/*" element={<AuthLayout />} />
     </Routes>
   )
 }
