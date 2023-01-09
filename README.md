@@ -28,7 +28,9 @@
 
 ## Links
 
-1. Absolute Imports
+1. React File Structure Best practice
+   1. https://onoufriosm.medium.com/react-best-practices-react-at-scale-part-2-11b69b96f5e
+2. Absolute Imports
    1. https://medium.com/geekculture/making-life-easier-with-absolute-imports-react-in-javascript-and-typescript-bbdab8a8a3a1 
-2. Router
+3. Router
    1. https://blog.webdevsimplified.com/2022-07/react-router/

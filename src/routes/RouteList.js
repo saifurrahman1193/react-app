@@ -1,13 +1,13 @@
 import React from 'react'
-import GeneralRoutes from './GeneralRoutes'
 import ErrorRoutes from './ErrorRoutes'
+import GeneralRoutes from './GeneralRoutes'
 import AuthRoutes from './AuthRoutes'
 
 function RouteList() {
   return (
     <>
-      <GeneralRoutes />
       <ErrorRoutes />
+      <GeneralRoutes />
       <AuthRoutes />
     </>
   )
