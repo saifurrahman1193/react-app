@@ -5,11 +5,9 @@ import Home from "pages/Home"
 
 function GeneralRoutes() {
   return (
-        <>
-          <Routes> 
-            <Route path='/' element={<Home />} />
-          </Routes>
-        </>
+    <Routes>
+      <Route path='/' element={<Home />} />
+    </Routes>
   )
 }
 

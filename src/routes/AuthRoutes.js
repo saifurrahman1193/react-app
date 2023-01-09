@@ -5,11 +5,9 @@ import Login from "pages/Auth/Login"
 
 function AuthRoutes() {
   return (
-        <>
-          <Routes> 
-            <Route path='/login' element={<Login />} />
-          </Routes>
-        </>
+    <Routes>
+      <Route path='/login' element={<Login />} />
+    </Routes>
   )
 }
 
