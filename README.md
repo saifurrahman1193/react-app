@@ -14,22 +14,22 @@
 ### Built With
 
 
-| Build With          | Version | Server Version |
-| ------------------- | ------- | -------------- |
-| npm                 | 6.14.13 |                |
-| Node                | 14      |                |
-| react               | 18.2.0  |                |
-| react-router-dom    | 6.6.1   |                |
-| js-cookie           | 3.0.1   |                |
-| moment              | 2.29.4  |                |
-| axios               | 1.2.2   |                |
-| feather-icons-react | 0.6.2   |                |
-|                     |         |                |
-|                     |         |                |
-|                     |         |                |
-|                     |         |                |
-| Absolute Imports    |         |                |
-|                     |         |                |
+| Build With          | Version | Server Version | Purposes |
+| ------------------- | ------- | -------------- | -------- |
+| npm                 | 6.14.13 |                |          |
+| Node                | 14      |                |          |
+| react               | 18.2.0  |                |          |
+| react-router-dom    | 6.6.1   |                |          |
+| js-cookie           | 3.0.1   |                |          |
+| moment              | 2.29.4  |                |          |
+| axios               | 1.2.2   |                |          |
+| feather-icons-react | 0.6.2   |                | icon     |
+|                     |         |                |          |
+|                     |         |                |          |
+|                     |         |                |          |
+|                     |         |                |          |
+| Absolute Imports    |         |                |          |
+|                     |         |                |          |
 
 
 
