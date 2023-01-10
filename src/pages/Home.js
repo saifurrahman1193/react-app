@@ -1,11 +1,19 @@
-import React from 'react'
+import Cookies from 'js-cookie';
+import React, {useEffect} from 'react'
 
 
 function Home() {
+  useEffect(() => {
+    let token = Cookies.get("ProjectToken");
+
+    if (!token) {
+      window.location = "/auth/login";
+    }
+  }, []);
  
   return (
     <>
-        <h1>Home Page</h1>
+        <h1>Welcome</h1>
     </>
   )
 }
