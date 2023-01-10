@@ -16,6 +16,7 @@
 
 | Build With          | Version | Server Version |
 | ------------------- | ------- | -------------- |
+| npm                 | 6.14.13 |                |
 | Node                | 14      |                |
 | react               | 18.2.0  |                |
 | react-router-dom    | 6.6.1   |                |
