@@ -1,11 +1,16 @@
 import React from 'react'
+import { Card, Col, Row, Space  } from 'antd';
 
 function Login() {
   return (
-    <>
-        <h1>Login Page</h1>
+    <Space direction="vertical" size="middle" style={{ display: 'flex' }} >
 
-    </>
+        <Card title="Login" bordered={false} >
+
+        </Card>
+
+    </Space>
+
   )
 }
 
