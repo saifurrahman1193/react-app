@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
-import PrivateRoutes from 'routes/PrivateRoutes'
+import PrivateRoutes from 'routes/private-routes'
 import Cookies from 'js-cookie';
 
 function PrivateLayout() {

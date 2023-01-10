@@ -1,6 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
-import AuthRoutes from 'routes/AuthRoutes'
+import AuthRoutes from 'routes/auth-routes'
 
 function AuthLayout() {
   return (

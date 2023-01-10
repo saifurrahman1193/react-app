@@ -1,10 +1,10 @@
-import NotFound from "pages/Error/NotFound";
+import NotFound from "pages/error/not-found";
 import { lazy } from "react";
 
-const Login = lazy(() => import('pages/Auth/Login'));
-const ForgotPassword = lazy(() => import('pages/Auth/ForgotPassword'));
-const ForgotPasswordCodeVerify = lazy(() => import('pages/Auth/ForgotPasswordCodeVerify'));
-const PasswordReset = lazy(() => import('pages/Auth/PasswordReset'));
+const Login = lazy(() => import('pages/auth/login'));
+const ForgotPassword = lazy(() => import('pages/auth/forgot-password'));
+const ForgotPasswordCodeVerify = lazy(() => import('pages/auth/forgot-password-code-verify'));
+const PasswordReset = lazy(() => import('pages/auth/password-reset'));
 
 const AuthRoutes = [
   { path: 'login', name: 'login', component: Login },
