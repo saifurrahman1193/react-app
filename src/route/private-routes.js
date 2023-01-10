@@ -1,9 +1,9 @@
-import NotFound from "pages/error/not-found";
+import NotFound from "page/error/not-found";
 import { lazy } from "react";
 
-const User = lazy(() => import('pages/private/access-control/user'));
-const Role = lazy(() => import('pages/private/access-control/role'));
-const Permission = lazy(() => import('pages/private/access-control/permission'));
+const User = lazy(() => import('page/private/access-control/user'));
+const Role = lazy(() => import('page/private/access-control/role'));
+const Permission = lazy(() => import('page/private/access-control/permission'));
 
 const AuthRoutes = [
   // Access Control routes

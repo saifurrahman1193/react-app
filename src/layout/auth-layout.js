@@ -1,6 +1,6 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
-import AuthRoutes from 'routes/auth-routes'
+import { Routes, Route, Outlet } from 'react-router-dom'
+import AuthRoutes from 'route/auth-routes'
 
 function AuthLayout() {
   return (
@@ -10,7 +10,7 @@ function AuthLayout() {
                 <Route path={route?.path} element={<route.component />} key={'route-'+route?.name} />
             )
         }
-        <Route />
+        {/* <Outlet /> */}
     </Routes>
   )
 }
