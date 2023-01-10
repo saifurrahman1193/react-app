@@ -19,6 +19,10 @@
 | Node             | 14      |                |
 | react            | 18.2.0  |                |
 | react-router-dom | 6.6.1   |                |
+| js-cookie        | 3.0.1   |                |
+|                  |         |                |
+|                  |         |                |
+|                  |         |                |
 |                  |         |                |
 |                  |         |                |
 | Absolute Imports |         |                |
