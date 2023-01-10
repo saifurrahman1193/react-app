@@ -4,6 +4,7 @@ import PrivateRoutes from 'routes/PrivateRoutes'
 import Cookies from 'js-cookie';
 
 function PrivateLayout() {
+    
   useEffect(() => {
     let token = Cookies.get("ProjectToken");
 
