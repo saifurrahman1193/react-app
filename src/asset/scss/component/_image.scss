@@ -1,0 +1,13 @@
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-thumbnail {
+    padding: 0.25rem;
+    background-color: $bs-body-bg;
+    border: $bs-border-width solid $bs-border-color;
+    border-radius: $bs-border-radius;
+    max-width: 100%;
+    height: auto;
+}
