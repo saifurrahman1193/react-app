@@ -1,7 +1,8 @@
 import React from 'react'
-import { Card, Col, Row, Space } from 'antd';
-
+import { Card, Col, Row, Space, Typography  } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
+
+const { Title } = Typography;
 
 function Login() {
   const onFinish = (values) => {
@@ -66,6 +67,9 @@ function Login() {
           Submit
         </Button>
       </Form.Item>
+
+      <Title className="text-success">Hello</Title>
+
     </Form>
     </Card>
   );
