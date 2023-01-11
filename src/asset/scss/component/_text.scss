@@ -51,139 +51,139 @@
 
 /* rtl:end:remove */
 .text-primary {
-    --bs-text-opacity: 1;
-    color: rgba($bs-primary-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-primary-rgb, $bs-text-opacity) !important;
 }
 
 .text-secondary {
-    --bs-text-opacity: 1;
-    color: rgba($bs-secondary-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-secondary-rgb, $bs-text-opacity) !important;
 }
 
 .text-success {
-    --bs-text-opacity: 1;
-    color: rgba($bs-success-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-success-rgb, $bs-text-opacity) !important;
 }
 
 .text-info {
-    --bs-text-opacity: 1;
-    color: rgba($bs-info-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-info-rgb, $bs-text-opacity) !important;
 }
 
 .text-warning {
-    --bs-text-opacity: 1;
-    color: rgba($bs-warning-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-warning-rgb, $bs-text-opacity) !important;
 }
 
 .text-danger {
-    --bs-text-opacity: 1;
-    color: rgba($bs-danger-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-danger-rgb, $bs-text-opacity) !important;
 }
 
 .text-light {
-    --bs-text-opacity: 1;
-    color: rgba($bs-light-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-light-rgb, $bs-text-opacity) !important;
 }
 
 .text-dark {
-    --bs-text-opacity: 1;
-    color: rgba($bs-dark-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-dark-rgb, $bs-text-opacity) !important;
 }
 
 .text-black {
-    --bs-text-opacity: 1;
-    color: rgba($bs-black-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-black-rgb, $bs-text-opacity) !important;
 }
 
 .text-white {
-    --bs-text-opacity: 1;
-    color: rgba($bs-white-rgb, var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-white-rgb, $bs-text-opacity) !important;
 }
 
 .text-body {
-    --bs-text-opacity: 1;
-    color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
+    $bs-text-opacity: 1;
+    color: rgba($bs-body-color-rgb, $bs-text-opacity) !important;
 }
 
 .text-muted {
-    --bs-text-opacity: 1;
-    color: var(--bs-secondary-color) !important;
+    $bs-text-opacity: 1;
+    color: $bs-secondary-color !important;
 }
 
 .text-black-50 {
-    --bs-text-opacity: 1;
+    $bs-text-opacity: 1;
     color: rgba(0, 0, 0, 0.5) !important;
 }
 
 .text-white-50 {
-    --bs-text-opacity: 1;
+    $bs-text-opacity: 1;
     color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .text-body-secondary {
-    --bs-text-opacity: 1;
-    color: var(--bs-secondary-color) !important;
+    $bs-text-opacity: 1;
+    color: $bs-secondary-color !important;
 }
 
 .text-body-tertiary {
-    --bs-text-opacity: 1;
-    color: var(--bs-tertiary-color) !important;
+    $bs-text-opacity: 1;
+    color: $bs-tertiary-color !important;
 }
 
 .text-body-emphasis {
-    --bs-text-opacity: 1;
-    color: var(--bs-emphasis-color) !important;
+    $bs-text-opacity: 1;
+    color: $bs-emphasis-color !important;
 }
 
 .text-reset {
-    --bs-text-opacity: 1;
+    $bs-text-opacity: 1;
     color: inherit !important;
 }
 
 .text-opacity-25 {
-    --bs-text-opacity: 0.25;
+    $bs-text-opacity: 0.25;
 }
 
 .text-opacity-50 {
-    --bs-text-opacity: 0.5;
+    $bs-text-opacity: 0.5;
 }
 
 .text-opacity-75 {
-    --bs-text-opacity: 0.75;
+    $bs-text-opacity: 0.75;
 }
 
 .text-opacity-100 {
-    --bs-text-opacity: 1;
+    $bs-text-opacity: 1;
 }
 
 .text-primary-emphasis {
-    color: var(--bs-primary-text) !important;
+    color: $bs-primary-text !important;
 }
 
 .text-secondary-emphasis {
-    color: var(--bs-secondary-text) !important;
+    color: $bs-secondary-text !important;
 }
 
 .text-success-emphasis {
-    color: var(--bs-success-text) !important;
+    color: $bs-success-text !important;
 }
 
 .text-info-emphasis {
-    color: var(--bs-info-text) !important;
+    color: $bs-info-text !important;
 }
 
 .text-warning-emphasis {
-    color: var(--bs-warning-text) !important;
+    color: $bs-warning-text !important;
 }
 
 .text-danger-emphasis {
-    color: var(--bs-danger-text) !important;
+    color: $bs-danger-text !important;
 }
 
 .text-light-emphasis {
-    color: var(--bs-light-text) !important;
+    color: $bs-light-text !important;
 }
 
 .text-dark-emphasis {
-    color: var(--bs-dark-text) !important;
+    color: $bs-dark-text !important;
 }
