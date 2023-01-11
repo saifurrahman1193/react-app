@@ -1,24 +1,31 @@
 .text-primary {
     color: $bs-primary-text !important;
 }
+
 .text-secondary {
     color: $bs-secondary-text !important;
 }
+
 .text-success {
     color: $bs-success-text !important;
 }
+
 .text-info {
     color: $bs-info-text !important;
 }
+
 .text-warning {
     color: $bs-warning-text !important;
 }
+
 .text-danger {
     color: $bs-danger-text !important;
 }
+
 .text-light {
     color: $bs-light-text !important;
 }
+
 .text-dark {
     color: $bs-dark-text !important;
 }
@@ -30,13 +37,3 @@
     color: #74788d !important;
 }
 
-// Text alignment
-.text-left {
-    text-align: left !important;
-}
-.text-right {
-    text-align: right !important;
-}
-.text-center {
-    text-align: center !important;
-}
