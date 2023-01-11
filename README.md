@@ -23,7 +23,6 @@
 | js-cookie           | 3.0.1   |                |          |
 | moment              | 2.29.4  |                |          |
 | axios               | 1.2.2   |                |          |
-| feather-icons-react | 0.6.2   |                | icon     |
 | ant                 | 5.1.4   |                |          |
 |                     |         |                |          |
 |                     |         |                |          |

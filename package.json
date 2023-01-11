@@ -8,7 +8,6 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.1.4",
     "axios": "^1.2.2",
-    "feather-icons-react": "^0.6.2",
     "js-cookie": "^3.0.1",
     "moment": "^2.29.4",
     "node-sass": "^8.0.0",
