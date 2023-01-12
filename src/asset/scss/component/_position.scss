@@ -1,100 +1,191 @@
+.position-static {
+    position: static !important;
+}
+
+.position-relative {
+    position: relative !important;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+
+.position-fixed {
+    position: fixed !important;
+}
+
+.position-sticky {
+    position: -webkit-sticky !important;
+    position: sticky !important;
+}
+
+.top-0 {
+    top: 0 !important;
+}
+
+.top-50 {
+    top: 50% !important;
+}
+
+.top-100 {
+    top: 100% !important;
+}
+
+.bottom-0 {
+    bottom: 0 !important;
+}
+
+.bottom-50 {
+    bottom: 50% !important;
+}
+
+.bottom-100 {
+    bottom: 100% !important;
+}
+
+.start-0 {
+    left: 0 !important;
+}
+
+.start-50 {
+    left: 50% !important;
+}
+
+.start-100 {
+    left: 100% !important;
+}
+
+.end-0 {
+    right: 0 !important;
+}
+
+.end-50 {
+    right: 50% !important;
+}
+
+.end-100 {
+    right: 100% !important;
+}
+
+.translate-middle {
+    transform: translate(-50%, -50%) !important;
+}
+
+.translate-middle-x {
+    transform: translateX(-50%) !important;
+}
+
+.translate-middle-y {
+    transform: translateY(-50%) !important;
+}
+
+
 .fixed-top {
     position: fixed;
     top: 0;
     right: 0;
     left: 0;
     z-index: 1030;
-  }
-  
-  .fixed-bottom {
+}
+
+.fixed-bottom {
     position: fixed;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1030;
-  }
-  
-  .sticky-top {
+}
+
+.sticky-top {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
-  }
-  
-  .sticky-bottom {
+}
+
+.sticky-bottom {
     position: -webkit-sticky;
     position: sticky;
     bottom: 0;
     z-index: 1020;
-  }
-  
-  @media (min-width: 576px) {
+}
+
+@media (min-width: 576px) {
     .sticky-sm-top {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
     }
+
     .sticky-sm-bottom {
-      position: -webkit-sticky;
-      position: sticky;
-      bottom: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        z-index: 1020;
     }
-  }
-  @media (min-width: 768px) {
+}
+
+@media (min-width: 768px) {
     .sticky-md-top {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
     }
+
     .sticky-md-bottom {
-      position: -webkit-sticky;
-      position: sticky;
-      bottom: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        z-index: 1020;
     }
-  }
-  @media (min-width: 992px) {
+}
+
+@media (min-width: 992px) {
     .sticky-lg-top {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
     }
+
     .sticky-lg-bottom {
-      position: -webkit-sticky;
-      position: sticky;
-      bottom: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        z-index: 1020;
     }
-  }
-  @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
     .sticky-xl-top {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
     }
+
     .sticky-xl-bottom {
-      position: -webkit-sticky;
-      position: sticky;
-      bottom: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        z-index: 1020;
     }
-  }
-  @media (min-width: 1400px) {
+}
+
+@media (min-width: 1400px) {
     .sticky-xxl-top {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 1020;
     }
+
     .sticky-xxl-bottom {
-      position: -webkit-sticky;
-      position: sticky;
-      bottom: 0;
-      z-index: 1020;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: 0;
+        z-index: 1020;
     }
-  }
+}
