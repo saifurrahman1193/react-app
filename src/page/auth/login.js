@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Card, Col, Row, Space, Typography } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
 
 const { Title } = Typography;
 
 function Login() {
+    const [loading, setLoading] = useState(false);
+
     const onFinish = (values) => {
+        setLoading(true);
         console.log('Success:', values);
     };
     const onFinishFailed = (errorInfo) => {
@@ -37,7 +40,7 @@ function Login() {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please input your username!',
+                                message: 'Please enter your email!',
                             },
                         ]}
                     >
@@ -50,7 +53,7 @@ function Login() {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please input your password!',
+                                message: 'Please enter your password!',
                             },
                         ]}
                     >

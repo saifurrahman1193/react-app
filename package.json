@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.1.4",
     "axios": "^1.2.2",
+    "dotenv": "^16.0.3",
     "js-cookie": "^3.0.1",
     "moment": "^2.29.4",
     "node-sass": "^8.0.0",
@@ -20,6 +21,9 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:dev": "env-cmd -f ./src/config/.env.local npm react-script build",
+    "build:stage": "env-cmd -f ./src/config/.env.stage npm run-script build",
+    "build:prod": "env-cmd -f ./src/config/.env.prod npm run-script build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
