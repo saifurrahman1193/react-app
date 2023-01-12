@@ -14,20 +14,21 @@
 ### Built With
 
 
-| Build With          | Version | Server Version | Purposes |
-| ------------------- | ------- | -------------- | -------- |
-| npm                 | 6.14.13 |                |          |
-| Node                | 14      |                |          |
-| react               | 18.2.0  |                |          |
-| react-router-dom    | 6.6.1   |                |          |
-| js-cookie           | 3.0.1   |                |          |
-| moment              | 2.29.4  |                |          |
-| axios               | 1.2.2   |                |          |
-| ant                 | 5.1.4   |                |          |
-|                     |         |                |          |
-|                     |         |                |          |
-| Absolute Imports    |         |                |          |
-|                     |         |                |          |
+| Build With       | Version | Server Version | Purposes |
+| ---------------- | ------- | -------------- | -------- |
+| npm              | 6.14.13 |                |          |
+| Node             | 14      |                |          |
+| react            | 18.2.0  |                |          |
+| react-dom        | 18.2.0  |                |          |
+| react-router-dom | 6.6.1   |                |          |
+| js-cookie        | 3.0.1   |                |          |
+| moment           | 2.29.4  |                |          |
+| axios            | 1.2.2   |                |          |
+| ant              | 5.1.4   |                |          |
+| dotenv           | 16.0.3  |                |          |
+|                  |         |                |          |
+| Absolute Imports |         |                |          |
+|                  |         |                |          |
 
 
 
