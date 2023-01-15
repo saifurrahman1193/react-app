@@ -1,7 +1,6 @@
 import axios from "axios";
 import Cookies from "js-cookie";
-import { checkRes } from "./helper";
-import { alertPop } from "./helper";
+import { checkRes, alertPop } from "./helper";
 
 const base_url = process.env.REACT_APP_API_BASE_URL;
 const token = Cookies.get("OTLToken") || "";

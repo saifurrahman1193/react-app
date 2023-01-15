@@ -7,7 +7,7 @@ function Home() {
     let token = Cookies.get("ProjectToken");
 
     if (!token) {
-      window.location = "/auth/login";
+      window.location = process.env.REACT_APP_LOGIN_PAGE;
     }
   }, []);
  

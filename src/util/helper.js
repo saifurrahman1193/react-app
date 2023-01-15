@@ -7,10 +7,10 @@ export const checkRes = (param) => {
     return true;
   } else if (param === 401) {
     Cookies.remove("OTLToken");
-    window.location = "/auth/login";
+    window.location = process.env.REACT_APP_LOGIN_PAGE;
   } else if (param === 403) {
     Cookies.remove("OTLToken");
-    window.location = "/auth/login";
+    window.location = process.env.REACT_APP_LOGIN_PAGE;
   } else {
     return false;
   }
@@ -59,7 +59,7 @@ export const buildSearchQuery = (object = {}) => {
 
 export const logout = () => {
   Cookies.remove("OTLToken");
-  window.location = "/auth/login";
+  window.location = process.env.REACT_APP_LOGIN_PAGE;
 }
 
 export const queryBuilder = (data) => {
