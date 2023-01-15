@@ -6,6 +6,8 @@ function Home() {
   useEffect(() => {
     let token = Cookies.get("ProjectToken");
 
+    console.log(process.env.REACT_APP_LOGIN_PAGE);
+
     if (!token) {
       window.location = process.env.REACT_APP_LOGIN_PAGE;
     }

@@ -32,7 +32,6 @@ function Login() {
     };
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
-        console.log(process.env.REACT_APP_API_BASE_URL);
 
     };
     return (
@@ -88,7 +87,7 @@ function Login() {
                             span: 16,
                         }}
                     >
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" loading={loading}>
                             Submit
                         </Button>
                     </Form.Item>
