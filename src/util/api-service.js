@@ -3,7 +3,7 @@ import Cookies from "js-cookie";
 import { checkRes } from "./helper";
 import { alertPop } from "./helper";
 
-const base_url = process.env.REACT_APP_BASE;
+const base_url = process.env.REACT_APP_API_BASE_URL;
 const token = Cookies.get("OTLToken") || "";
 
 axios.defaults.headers.post["Content-Type"] = "application/json";

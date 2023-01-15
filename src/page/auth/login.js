@@ -1,21 +1,42 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Card, Col, Row, Space, Typography } from 'antd';
 import { Button, Checkbox, Form, Input } from 'antd';
+import { postData } from "util/api-service";
+import { LOGIN } from "util/api";
+import Cookies from "js-cookie";
 
 const { Title } = Typography;
 
 function Login() {
     const [loading, setLoading] = useState(false);
 
-    const onFinish = (values) => {
+    const onFinish = async (values) => {
+        
         setLoading(true);
-        console.log('Success:', values);
+        let res = await postData(LOGIN, values, true);
+
+        if (res) {
+            let data = res?.data?.user;
+      
+            console.log("data", data);
+      
+            Cookies.set(
+              "ProjectToken",
+              `${data.token_type} ${data.access_token}`
+            );
+            window.location = "/";
+            setLoading(false);
+          } else {
+            setLoading(false);
+          }
     };
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
+        console.log(process.env.REACT_APP_API_BASE_URL);
+
     };
     return (
-        <Row type="flex" justify="center" align="middle"  style={{minHeight: '100vh'}}>
+        <Row type="flex" justify="center" align="middle" style={{ minHeight: '100vh' }}>
             <Card
                 title="Login"
             >
@@ -35,8 +56,8 @@ function Login() {
                     autoComplete="off"
                 >
                     <Form.Item
-                        label="Username"
-                        name="username"
+                        label="Email"
+                        name="email"
                         rules={[
                             {
                                 required: true,
