@@ -24,8 +24,8 @@ const AuthContextProvider = (props) => {
                 let masterData = res?.data;
 
                 setUser({ ...masterData?.user });
-                setRoles({ ...masterData?.roles });
-                setPermissions({ ...masterData?.permissions });
+                setRoles([...masterData?.roles]);
+                setPermissions([...masterData?.permissions]);
             }
         }
     }
