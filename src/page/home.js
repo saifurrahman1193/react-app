@@ -1,8 +1,11 @@
 import Cookies from 'js-cookie';
-import React, { useEffect } from 'react'
+import React, { useEffect, useContext } from 'react'
+import {AuthContext} from 'context/auth-context'
 
 
 function Home() {
+	const { user, roles, permissions } = useContext(AuthContext);
+
 	useEffect(() => {
 		let token = Cookies.get("ProjectToken");
 
@@ -13,7 +16,9 @@ function Home() {
 
 	return (
 		<>
-			<h1>Welcome</h1>
+			<h1>Welcome {user?.name}</h1>
+			<h1>Roles: {roles?.length}</h1>
+			<h1>Permissions: {permissions?.length}</h1>
 		</>
 	)
 }
