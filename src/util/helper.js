@@ -6,10 +6,10 @@ export const checkRes = (param) => {
   if (param === 200 || param === 201 || param === 212) {
     return true;
   } else if (param === 401) {
-    Cookies.remove("OTLToken");
+    Cookies.remove("ProjectToken");
     window.location = process.env.REACT_APP_LOGIN_PAGE;
   } else if (param === 403) {
-    Cookies.remove("OTLToken");
+    Cookies.remove("ProjectToken");
     window.location = process.env.REACT_APP_LOGIN_PAGE;
   } else {
     return false;
@@ -58,7 +58,7 @@ export const buildSearchQuery = (object = {}) => {
 }
 
 export const logout = () => {
-  Cookies.remove("OTLToken");
+  Cookies.remove("ProjectToken");
   window.location = process.env.REACT_APP_LOGIN_PAGE;
 }
 

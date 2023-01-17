@@ -12,7 +12,6 @@ function App() {
       <Routes>
         <Route path="/auth/*" element={<AuthLayout />} />
         <Route path="/*" element={<PrivateLayout />} />
-        <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>

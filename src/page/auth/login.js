@@ -18,8 +18,6 @@ function Login() {
         if (res) {
             let data = res?.data?.user;
       
-            console.log("data", data);
-      
             Cookies.set(
               "ProjectToken",
               `${data.token_type} ${data.access_token}`
