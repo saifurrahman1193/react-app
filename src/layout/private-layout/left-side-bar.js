@@ -1,13 +1,15 @@
-import { HomeOutlined, SafetyOutlined, UserOutlined } from '@ant-design/icons';
+import React, { useContext, useState } from 'react'
+import { HomeOutlined, SafetyOutlined } from '@ant-design/icons';
 import { Menu, Layout } from 'antd';
 import { Link } from "react-router-dom";
 import { AuthContext } from 'context/auth-context'
-import React, { useContext, useState } from 'react'
+import { PrivateLayoutContext } from 'context/private-layout-context'
 const { Sider } = Layout;
 
 
 function LeftSideBar () {
     const { permissions } = useContext(AuthContext);
+    const { leftSideBarCollapsed } = useContext(PrivateLayoutContext);
 
     const items = [
         {
@@ -72,11 +74,9 @@ function LeftSideBar () {
         console.log('click', e);
     };
 
-    const [collapsed, setCollapsed] = useState(false);
-
 
     return (
-        <Sider trigger={null} collapsible collapsed={collapsed} >
+        <Sider trigger={null} collapsible collapsed={leftSideBarCollapsed} >
 
         {/* This menu is designed to be used for displaying 3 levels */}
         <Menu

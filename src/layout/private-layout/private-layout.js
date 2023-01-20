@@ -4,6 +4,7 @@ import PrivateRoutes from 'route/private-routes'
 import Cookies from 'js-cookie';
 import AuthContextProvider from 'context/auth-context';
 import { Layout, Menu } from "antd";
+import PrivateLayoutContextProvider from 'context/private-layout-context';
 const TopBar = lazy(()=>import('./top-bar'))
 const LeftSideBar = lazy(()=>import('./left-side-bar'))
 const BottomBar = lazy(()=>import('./bottom-bar'))
@@ -22,23 +23,25 @@ function PrivateLayout() {
 
     return (
         <AuthContextProvider>
-            <Layout className='private-layout'>
-                <TopBar />
-                <Layout>
-                    <LeftSideBar/>
-                    <Content>
-                        <Outlet/>
-                        <Routes>
-                            {
-                                PrivateRoutes?.map((route, index) =>
-                                    <Route path={route?.path} element={<route.component />} key={'route-' + route?.name} />
-                                )
-                            }
-                        </Routes>
-                    </Content>
+            <PrivateLayoutContextProvider>
+                <Layout className='private-layout'>
+                    <TopBar />
+                    <Layout>
+                        <LeftSideBar/>
+                        <Content>
+                            <Outlet/>
+                            <Routes>
+                                {
+                                    PrivateRoutes?.map((route, index) =>
+                                        <Route path={route?.path} element={<route.component />} key={'route-' + route?.name} />
+                                    )
+                                }
+                            </Routes>
+                        </Content>
+                    </Layout>
+                    <BottomBar/>
                 </Layout>
-                <BottomBar/>
-            </Layout>
+            </PrivateLayoutContextProvider>
         </AuthContextProvider>
     )
 }
