@@ -19,7 +19,6 @@ const LeftSidebar = () => {
             label: 'Access Control',
             key: 'access-control',
             icon: <SafetyOutlined />,
-            permission: null,
             children: [
                 {
                     label: 'User',
@@ -50,11 +49,13 @@ const LeftSidebar = () => {
             }}
             mode="vertical"
             items={
+                // level 1
                 items.map((item, index) => {
                     console.log(item?.permission, permissions, permissions?.includes(item?.permission));
                     return {
                         ...item,
                         label: <Link to={item?.path}>{item?.label}</Link>,
+                        // level 2
                         children: item?.children?.map((child_item, child_index) => {
                             // if (child_item) has permission then check permission exist in permissions array, otherwise return
                             let return_status = 0;
