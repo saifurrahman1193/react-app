@@ -6,7 +6,7 @@ import React, { useContext, useState } from 'react'
 const { Sider } = Layout;
 
 
-const LeftSideBar = () => {
+function LeftSideBar () {
     const { permissions } = useContext(AuthContext);
 
     const items = [
@@ -76,7 +76,7 @@ const LeftSideBar = () => {
 
 
     return (
-        <Sider trigger={null} collapsible collapsed={collapsed} onClick={() => setCollapsed(!collapsed)}>
+        <Sider trigger={null} collapsible collapsed={collapsed} >
 
         {/* This menu is designed to be used for displaying 3 levels */}
         <Menu
