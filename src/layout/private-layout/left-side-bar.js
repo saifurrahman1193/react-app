@@ -1,11 +1,12 @@
 import { HomeOutlined, SafetyOutlined, UserOutlined } from '@ant-design/icons';
-import { Menu } from 'antd';
+import { Menu, Layout } from 'antd';
 import { Link } from "react-router-dom";
 import { AuthContext } from 'context/auth-context'
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+const { Sider } = Layout;
 
 
-const LeftSidebar = () => {
+const LeftSideBar = () => {
     const { permissions } = useContext(AuthContext);
 
     const items = [
@@ -71,13 +72,16 @@ const LeftSidebar = () => {
         console.log('click', e);
     };
 
+    const [collapsed, setCollapsed] = useState(false);
+
 
     return (
-        // This menu is designed to be used for displaying 3 levels
+        <Sider trigger={null} collapsible collapsed={collapsed} onClick={() => setCollapsed(!collapsed)}>
+
+        {/* This menu is designed to be used for displaying 3 levels */}
         <Menu
             onClick={(e) => onClick(e)}
             style={{
-                width: 256,
                 height: '100vh',
             }}
             mode="vertical"
@@ -129,6 +133,8 @@ const LeftSidebar = () => {
 
 
         </Menu>
+
+        </Sider>
     )
 };
-export default LeftSidebar;
+export default LeftSideBar;
