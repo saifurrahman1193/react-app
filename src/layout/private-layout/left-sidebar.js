@@ -51,7 +51,7 @@ const LeftSidebar = () => {
                         },
                         {
                             label: 'Inventory 2',
-                            path: '/configuration/inventory',
+                            path: '/configuration/inventory-2',
                             key: 'inventory-2',
                             permission: 'inventory list',
                         },
@@ -71,7 +71,9 @@ const LeftSidebar = () => {
         console.log('click', e);
     };
 
+
     return (
+        // This menu is designed to be used for displaying 3 levels
         <Menu
             onClick={(e) => onClick(e)}
             style={{
@@ -82,7 +84,7 @@ const LeftSidebar = () => {
             items={
                 // level 1 = root level
                 items.map((item, index) => {
-                    console.log(item?.permission, permissions, permissions?.includes(item?.permission));
+                    // console.log(item?.permission, permissions, permissions?.includes(item?.permission));
                     return {
                         ...item,
                         label: <Link to={item?.path}>{item?.label}</Link>,
@@ -100,7 +102,24 @@ const LeftSidebar = () => {
                             }
                             return return_status && {
                                 ...l2_item,
-                                label: <Link to={l2_item?.path}>{l2_item?.label}</Link>
+                                label: <Link to={l2_item?.path}>{l2_item?.label}</Link>,
+                                // level 3
+                                children: l2_item?.children?.map((l3_item, l2_index) => {
+                                    // if (l3_item) has permission then check permission exist in permissions array, otherwise return
+                                    let return_status = 0;
+                                    if (l3_item?.permission) {
+                                        if (permissions?.includes(l3_item?.permission)) {
+                                            return_status = 1;
+                                        }
+                                    }
+                                    else{
+                                        return_status = 1;
+                                    }
+                                    return return_status && {
+                                        ...l3_item,
+                                        label: <Link to={l3_item?.path}>{l3_item?.label}</Link>
+                                    }
+                                })
                             }
                         })
                     }
