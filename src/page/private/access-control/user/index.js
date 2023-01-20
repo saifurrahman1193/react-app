@@ -2,7 +2,7 @@ import React from 'react'
 
 function User() {
 	return (
-		<div>User</div>
+		<div>This is User page where all the contents will be loaded</div>
 	)
 }
 

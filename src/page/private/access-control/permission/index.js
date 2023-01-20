@@ -2,7 +2,8 @@ import React from 'react'
 
 function Permission() {
   return (
-    <div>Permission</div>
+    <div>This is Permission page where all the contents will be loaded</div>
+
   )
 }
 
