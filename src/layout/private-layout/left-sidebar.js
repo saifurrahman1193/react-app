@@ -83,13 +83,13 @@ const LeftSidebar = () => {
             mode="vertical"
             items={
                 // level 1 = root level
-                items.map((item, index) => {
-                    // console.log(item?.permission, permissions, permissions?.includes(item?.permission));
+                items.map((l1_item, index) => {
+                    // console.log(l1_item?.permission, permissions, permissions?.includes(l1_item?.permission));
                     return {
-                        ...item,
-                        label: <Link to={item?.path}>{item?.label}</Link>,
+                        ...l1_item,
+                        label: <Link to={l1_item?.path}>{l1_item?.label}</Link>,
                         // level 2
-                        children: item?.children?.map((l2_item, l2_index) => {
+                        children: l1_item?.children?.map((l2_item, l2_index) => {
                             // if (l2_item) has permission then check permission exist in permissions array, otherwise return
                             let return_status = 0;
                             if (l2_item?.permission) {
