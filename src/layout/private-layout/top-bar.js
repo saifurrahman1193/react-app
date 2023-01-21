@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { MenuUnfoldOutlined, MenuFoldOutlined } from '@ant-design/icons';
-import { Layout, Menu } from "antd";
+import { Layout } from "antd";
 import { PrivateLayoutContext } from 'context/private-layout-context'
 const { Header } = Layout;
 
