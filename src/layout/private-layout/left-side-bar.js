@@ -108,7 +108,7 @@ function LeftSideBar() {
                                     ...l2_item,
                                     label: <Link to={l2_item?.path}>{l2_item?.label}</Link>,
                                     // level 3
-                                    children: l2_item?.children?.map((l3_item, l2_index) => {
+                                    children: l2_item?.children?.map((l3_item, l3_index) => {
                                         // if (l3_item) has permission then check permission exist in permissions array, otherwise return
                                         let return_status = 0;
                                         if (l3_item?.permission) {
