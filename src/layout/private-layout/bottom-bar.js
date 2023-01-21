@@ -4,11 +4,11 @@ const { Footer } = Layout;
 
 
 function BottomBar() {
-  return (
-    <Footer >
-        Ant Design ©2023 Created by Ant UED
-    </Footer>
-  )
+    return (
+        <Footer >
+            Ant Design ©2023 Created by Ant UED
+        </Footer>
+    )
 }
 
 export default BottomBar

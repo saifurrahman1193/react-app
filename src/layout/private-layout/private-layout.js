@@ -5,9 +5,9 @@ import Cookies from 'js-cookie';
 import AuthContextProvider from 'context/auth-context';
 import { Layout, Menu } from "antd";
 import PrivateLayoutContextProvider from 'context/private-layout-context';
-const TopBar = lazy(()=>import('./top-bar'))
-const LeftSideBar = lazy(()=>import('./left-side-bar'))
-const BottomBar = lazy(()=>import('./bottom-bar'))
+const TopBar = lazy(() => import('./top-bar'))
+const LeftSideBar = lazy(() => import('./left-side-bar'))
+const BottomBar = lazy(() => import('./bottom-bar'))
 
 const { Content } = Layout;
 
@@ -27,9 +27,9 @@ function PrivateLayout() {
                 <Layout className='private-layout'>
                     <TopBar />
                     <Layout>
-                        <LeftSideBar/>
+                        <LeftSideBar />
                         <Content>
-                            <Outlet/>
+                            <Outlet />
                             <Routes>
                                 {
                                     PrivateRoutes?.map((route, index) =>
@@ -39,7 +39,7 @@ function PrivateLayout() {
                             </Routes>
                         </Content>
                     </Layout>
-                    <BottomBar/>
+                    <BottomBar />
                 </Layout>
             </PrivateLayoutContextProvider>
         </AuthContextProvider>

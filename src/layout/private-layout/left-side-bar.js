@@ -7,7 +7,7 @@ import { PrivateLayoutContext } from 'context/private-layout-context'
 const { Sider } = Layout;
 
 
-function LeftSideBar () {
+function LeftSideBar() {
     const { permissions } = useContext(AuthContext);
     const { leftSideBarCollapsed } = useContext(PrivateLayoutContext);
 
@@ -59,7 +59,7 @@ function LeftSideBar () {
                             permission: 'inventory list',
                         },
                     ]
-                    
+
                 },
                 {
                     label: 'Customer',
@@ -78,61 +78,61 @@ function LeftSideBar () {
     return (
         <Sider trigger={null} collapsible collapsed={leftSideBarCollapsed} >
 
-        {/* This menu is designed to be used for displaying 3 levels */}
-        <Menu
-            onClick={(e) => onClick(e)}
-            style={{
-                height: '100vh',
-            }}
-            mode="vertical"
-            items={
-                // level 1 = root level
-                items.map((l1_item, index) => {
-                    // console.log(l1_item?.permission, permissions, permissions?.includes(l1_item?.permission));
-                    return {
-                        ...l1_item,
-                        label: <Link to={l1_item?.path}>{l1_item?.label}</Link>,
-                        // level 2
-                        children: l1_item?.children?.map((l2_item, l2_index) => {
-                            // if (l2_item) has permission then check permission exist in permissions array, otherwise return
-                            let return_status = 0;
-                            if (l2_item?.permission) {
-                                if (permissions?.includes(l2_item?.permission)) {
-                                    return_status = 1;
-                                }
-                            }
-                            else{
-                                return_status = 1;
-                            }
-                            return return_status && {
-                                ...l2_item,
-                                label: <Link to={l2_item?.path}>{l2_item?.label}</Link>,
-                                // level 3
-                                children: l2_item?.children?.map((l3_item, l2_index) => {
-                                    // if (l3_item) has permission then check permission exist in permissions array, otherwise return
-                                    let return_status = 0;
-                                    if (l3_item?.permission) {
-                                        if (permissions?.includes(l3_item?.permission)) {
-                                            return_status = 1;
-                                        }
-                                    }
-                                    else{
+            {/* This menu is designed to be used for displaying 3 levels */}
+            <Menu
+                onClick={(e) => onClick(e)}
+                style={{
+                    height: '100vh',
+                }}
+                mode="vertical"
+                items={
+                    // level 1 = root level
+                    items.map((l1_item, index) => {
+                        // console.log(l1_item?.permission, permissions, permissions?.includes(l1_item?.permission));
+                        return {
+                            ...l1_item,
+                            label: <Link to={l1_item?.path}>{l1_item?.label}</Link>,
+                            // level 2
+                            children: l1_item?.children?.map((l2_item, l2_index) => {
+                                // if (l2_item) has permission then check permission exist in permissions array, otherwise return
+                                let return_status = 0;
+                                if (l2_item?.permission) {
+                                    if (permissions?.includes(l2_item?.permission)) {
                                         return_status = 1;
                                     }
-                                    return return_status && {
-                                        ...l3_item,
-                                        label: <Link to={l3_item?.path}>{l3_item?.label}</Link>
-                                    }
-                                })
-                            }
-                        })
-                    }
-                })
-            }
-        >
+                                }
+                                else {
+                                    return_status = 1;
+                                }
+                                return return_status && {
+                                    ...l2_item,
+                                    label: <Link to={l2_item?.path}>{l2_item?.label}</Link>,
+                                    // level 3
+                                    children: l2_item?.children?.map((l3_item, l2_index) => {
+                                        // if (l3_item) has permission then check permission exist in permissions array, otherwise return
+                                        let return_status = 0;
+                                        if (l3_item?.permission) {
+                                            if (permissions?.includes(l3_item?.permission)) {
+                                                return_status = 1;
+                                            }
+                                        }
+                                        else {
+                                            return_status = 1;
+                                        }
+                                        return return_status && {
+                                            ...l3_item,
+                                            label: <Link to={l3_item?.path}>{l3_item?.label}</Link>
+                                        }
+                                    })
+                                }
+                            })
+                        }
+                    })
+                }
+            >
 
 
-        </Menu>
+            </Menu>
 
         </Sider>
     )
