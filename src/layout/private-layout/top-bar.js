@@ -10,7 +10,7 @@ function TopBar() {
     return (
         <Header>
             {React.createElement(leftSideBarCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                className: 'trigger',
+                className: 'trigger m-0 p-0',
                 onClick: () => setLeftSideBarCollapsed(!leftSideBarCollapsed),
             })}
         </Header>
