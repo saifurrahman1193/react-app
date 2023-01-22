@@ -25,10 +25,10 @@ function PrivateLayout() {
         <AuthContextProvider>
             <PrivateLayoutContextProvider>
                 <Layout className='private-layout'>
-                    <TopBar />
                     <Layout>
                         <LeftSideBar />
                         <Layout>
+                            <TopBar />
                             <Content>
                                 <Outlet />
                                 <Routes>
