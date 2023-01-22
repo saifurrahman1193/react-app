@@ -26,7 +26,7 @@ function PrivateLayout() {
             <PrivateLayoutContextProvider>
                 <Layout className='private-layout'>
                     <Layout>
-                        <LeftSideBar />
+                        <LeftSideBar />  {/* <Sider> -> <Menu> */}
                         <Layout>
                             <TopBar />
                             <Content>
