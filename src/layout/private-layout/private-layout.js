@@ -28,18 +28,20 @@ function PrivateLayout() {
                     <TopBar />
                     <Layout>
                         <LeftSideBar />
-                        <Content>
-                            <Outlet />
-                            <Routes>
-                                {
-                                    PrivateRoutes?.map((route, index) =>
-                                        <Route path={route?.path} element={<route.component />} key={'route-' + route?.name} />
-                                    )
-                                }
-                            </Routes>
-                        </Content>
+                        <Layout>
+                            <Content>
+                                <Outlet />
+                                <Routes>
+                                    {
+                                        PrivateRoutes?.map((route, index) =>
+                                            <Route path={route?.path} element={<route.component />} key={'route-' + route?.name} />
+                                        )
+                                    }
+                                </Routes>
+                            </Content>
+                            <BottomBar />
+                        </Layout>
                     </Layout>
-                    <BottomBar />
                 </Layout>
             </PrivateLayoutContextProvider>
         </AuthContextProvider>
