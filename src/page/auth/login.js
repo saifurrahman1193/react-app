@@ -11,22 +11,22 @@ function Login() {
     const [loading, setLoading] = useState(false);
 
     const onFinish = async (values) => {
-        
+
         setLoading(true);
         let res = await postData(LOGIN, values, true);
 
         if (res) {
             let data = res?.data?.user;
-      
+
             Cookies.set(
-              "ProjectToken",
-              `${data.token_type} ${data.access_token}`
+                "ProjectToken",
+                `${data.token_type} ${data.access_token}`
             );
             window.location = "/";
             setLoading(false);
-          } else {
+        } else {
             setLoading(false);
-          }
+        }
     };
     const onFinishFailed = (errorInfo) => {
         console.log('Failed:', errorInfo);
