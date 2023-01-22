@@ -25,7 +25,6 @@
 | moment           | 2.29.4  |                |          |
 | axios            | 1.2.2   |                |          |
 | ant              | 5.1.4   |                |          |
-| dotenv           | 16.0.3  |                |          |
 |                  |         |                |          |
 | Absolute Imports |         |                |          |
 |                  |         |                |          |
