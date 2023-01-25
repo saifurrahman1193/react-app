@@ -29,7 +29,7 @@ function PrivateLayout() {
                         <LeftSideBar />  {/* <Sider> -> <Menu> */}
                         <Layout>
                             <TopBar />
-                            <Content className='px-2'>
+                            <Content className='mx-2'>
                                 {/* <Outlet /> */}
                                 <Routes>Content
                                     {
