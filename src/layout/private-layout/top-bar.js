@@ -7,12 +7,18 @@ import { Col, Row, Space } from 'antd';
 import { AuthContext } from 'context/auth-context'
 import { Dropdown, message } from 'antd';
 import { Link } from 'react-router-dom';
+import Cookies from 'js-cookie';
 
 const { Header } = Layout;
 
 function TopBar() {
     const { leftSideBarCollapsed, setLeftSideBarCollapsed } = useContext(PrivateLayoutContext);
     const { user } = useContext(AuthContext);
+
+    const logout = () => {
+        Cookies.remove('ProjectToken')
+        window.location = process.env.REACT_APP_LOGIN_PAGE;
+    }
 
     const items = [
         {
@@ -29,12 +35,13 @@ function TopBar() {
             type: 'divider',
         },
         {
-            label: 'Logout',
+            label: <Link onClick={logout}>Logout</Link>,
             key: 'logout',
             icon: <LogoutOutlined />,
         },
     ];
 
+    
 
     return (
         <Header>
