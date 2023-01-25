@@ -29,9 +29,9 @@ function PrivateLayout() {
                         <LeftSideBar />  {/* <Sider> -> <Menu> */}
                         <Layout>
                             <TopBar />
-                            <Content>
-                                <Outlet />
-                                <Routes>
+                            <Content className='px-2'>
+                                {/* <Outlet /> */}
+                                <Routes>Content
                                     {
                                         PrivateRoutes?.map((route, index) =>
                                             <Route path={route?.path} element={<route.component />} key={'route-' + route?.name} />

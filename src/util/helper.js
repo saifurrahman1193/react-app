@@ -118,3 +118,7 @@ export const unitNumber = (val) => {
 export const isNumber = (n) => {
     return !isNaN(parseFloat(n)) && isFinite(n);
 }
+
+export const getCurrentYear = () => {
+    return moment().year();
+}

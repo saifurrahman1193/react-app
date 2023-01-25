@@ -1,12 +1,13 @@
 import React from 'react'
 import { Layout } from "antd";
+import {getCurrentYear} from 'util/helper'
 const { Footer } = Layout;
 
 
 function BottomBar() {
     return (
         <Footer >
-            Ant Design ©2023 Created by Ant UED
+            <span>Copyright &copy; {getCurrentYear()} | Software Shop Limited | All Rights Reserved.</span>
         </Footer>
     )
 }
