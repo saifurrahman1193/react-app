@@ -1,6 +1,8 @@
 import Cookies from "js-cookie";
 import { notification } from 'antd'
 import moment from 'moment';
+import React from 'react'
+
 
 export const checkRes = (param) => {
     if (param === 200 || param === 201 || param === 212) {
@@ -122,3 +124,12 @@ export const isNumber = (n) => {
 export const getCurrentYear = () => {
     return moment().year();
 }
+
+
+export const DynamicIcon = props => {
+    const Icon = require('@ant-design/icons');
+    const { type, ...otherProps } = props;
+    const IconType = Icon[type];
+
+    return React.createElement(IconType, otherProps);
+};

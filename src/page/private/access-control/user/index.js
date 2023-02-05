@@ -12,7 +12,8 @@ function User() {
         layers: [
             {
                 title: 'Home',
-                link: '/'
+                link: '/',
+                icon: 'HomeOutlined'
             },
             {
                 title: 'Access Control'
@@ -26,7 +27,7 @@ function User() {
 
 	return (
 		<>
-			<BreadCrumb></BreadCrumb>
+			<BreadCrumb breadcrumb={breadcrumb}></BreadCrumb>
 		</>
 	)
 }
