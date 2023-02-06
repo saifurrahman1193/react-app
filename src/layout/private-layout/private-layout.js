@@ -21,6 +21,8 @@ function PrivateLayout() {
         }
     }, []);
 
+
+
     return (
         <AuthContextProvider>
             <PrivateLayoutContextProvider>
@@ -34,7 +36,11 @@ function PrivateLayout() {
                                 <Routes>Content
                                     {
                                         PrivateRoutes?.map((route, index) =>
-                                            <Route path={route?.path} element={<route.component />} key={'route-' + route?.name} />
+                                            <Route
+                                                path={route?.path}
+                                                element={<route.component />}
+                                                key={'route-' + route?.name}
+                                            />
                                         )
                                     }
                                 </Routes>

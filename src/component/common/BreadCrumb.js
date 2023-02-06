@@ -1,10 +1,12 @@
-import React, { Component, Fragment, useState } from 'react'
-import { Card, PageHeader, Breadcrumb, Button, Typography } from 'antd'
+import React, { Fragment, useContext } from 'react'
+import { Breadcrumb } from 'antd'
+import { PrivateLayoutContext } from 'context/private-layout-context'
 
 import { Link } from 'react-router-dom'
-import {DynamicIcon} from 'util/helper'
+import { DynamicIcon } from 'util/helper'
 
-function BreadCrumb({ breadcrumb }) {
+function BreadCrumb() {
+    const { breadcrumb } = useContext(PrivateLayoutContext);
 
     return (
         <Breadcrumb>

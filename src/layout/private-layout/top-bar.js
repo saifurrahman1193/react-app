@@ -5,9 +5,10 @@ import { PrivateLayoutContext } from 'context/private-layout-context'
 import { Avatar } from 'antd';
 import { Col, Row, Space } from 'antd';
 import { AuthContext } from 'context/auth-context'
-import { Dropdown, message } from 'antd';
+import { Dropdown } from 'antd';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
+import BreadCrumb from 'component/common/BreadCrumb';
 
 const { Header } = Layout;
 
@@ -41,37 +42,43 @@ function TopBar() {
         },
     ];
 
-    
+
+
 
     return (
-        <Header>
-            <Row>
-                <Col span={1}>
-                    {React.createElement(leftSideBarCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                        className: 'trigger m-0 p-0',
-                        onClick: () => setLeftSideBarCollapsed(!leftSideBarCollapsed),
-                    })}
-                </Col>
-                <Col span={23}>
-                    <Row justify="end">
-                        <Dropdown menu={{ items }}>
-                            <a onClick={(e) => e.preventDefault()} href='!#'>
-                                <Space>
+        <>
+            <Header>
+                <Row>
+                    <Col span={1}>
+                        {React.createElement(leftSideBarCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                            className: 'trigger m-0 p-0',
+                            onClick: () => setLeftSideBarCollapsed(!leftSideBarCollapsed),
+                        })}
+                    </Col>
+                    <Col span={23}>
+                        <Row justify="end">
+                            <Dropdown menu={{ items }}>
+                                <a onClick={(e) => e.preventDefault()} href='!#'>
+                                    <Space>
 
-                                    <span>{user?.name}</span>
-                                    <Avatar
-                                        style={{
-                                            backgroundColor: '#87d068',
-                                        }}
-                                        icon={<UserOutlined />}
-                                    />
-                                </Space>
-                            </a>
-                        </Dropdown>
-                    </Row>
-                </Col>
-            </Row>
-        </Header>
+                                        <span>{user?.name}</span>
+                                        <Avatar
+                                            style={{
+                                                backgroundColor: '#87d068',
+                                            }}
+                                            icon={<UserOutlined />}
+                                        />
+                                    </Space>
+                                </a>
+                            </Dropdown>
+                        </Row>
+                    </Col>
+                </Row>
+
+
+            </Header>
+            <BreadCrumb />
+        </>
     )
 }
 

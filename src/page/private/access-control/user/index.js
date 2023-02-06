@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { Card, PageHeader, Breadcrumb, Button, Typography, Layout } from 'antd'
-import { ArrowLeftOutlined, HomeOutlined } from "@ant-design/icons";
-import BreadCrumb from 'component/common/BreadCrumb';
-const { Title } = Typography;
+import React, {useContext, useEffect} from 'react'
+import { Layout } from 'antd'
+import { PrivateLayoutContext } from 'context/private-layout-context'
 const { Header } = Layout;
 
 function User() {
+    
+    const { setBreadcrumb } = useContext(PrivateLayoutContext);
+
     const breadcrumb = {
         pageTitle: 'Users',
         currentPath: '/users',
@@ -17,7 +17,8 @@ function User() {
                 icon: 'HomeOutlined'
             },
             {
-                title: 'Access Control'
+                title: 'Access Control',
+
             },
             {
                 title: 'Manage Users',
@@ -25,88 +26,14 @@ function User() {
         ]
     }
 
+    useEffect(() => {
+        setBreadcrumb(breadcrumb);
+    }, []);
+
+
     return (
         <>
-            <Header
-            className='mx-0'
-            >
-                <BreadCrumb breadcrumb={breadcrumb}></BreadCrumb>
-            </Header>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
-            <p>1</p>
+            
 
         </>
     )
