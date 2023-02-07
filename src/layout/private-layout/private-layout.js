@@ -1,10 +1,13 @@
-import React, { lazy, useEffect } from 'react'
+import React, { lazy, useEffect, useContext } from 'react'
 import { Routes, Route, Outlet } from 'react-router-dom'
 import PrivateRoutes from 'route/private-routes'
 import Cookies from 'js-cookie';
 import AuthContextProvider from 'context/auth-context';
-import {  Layout, FloatButton } from "antd";
+import {  Layout, FloatButton, Affix } from "antd";
 import PrivateLayoutContextProvider from 'context/private-layout-context';
+import BreadCrumb from 'component/common/BreadCrumb';
+
+
 const TopBar = lazy(() => import('./top-bar'))
 const LeftSideBar = lazy(() => import('./left-side-bar'))
 const BottomBar = lazy(() => import('./bottom-bar'))
@@ -12,6 +15,7 @@ const BottomBar = lazy(() => import('./bottom-bar'))
 const { Content } = Layout;
 
 function PrivateLayout() {
+
 
     useEffect(() => {
         let token = Cookies.get("ProjectToken");
@@ -27,13 +31,17 @@ function PrivateLayout() {
         <AuthContextProvider>
             <PrivateLayoutContextProvider>
                 <Layout className='private-layout'>
+                    <Affix offsetTop={0}>
+                        <TopBar />
+                    </Affix>
                     <Layout>
                         <LeftSideBar />  {/* <Sider> -> <Menu> */}
                         <Layout>
-                            <TopBar />
-                            <Content>
+                            <Content style={{ marginLeft: 200}}>
+                                <BreadCrumb />
+
                                 {/* <Outlet /> */}
-                                <Routes>Content
+                                <Routes>
                                     {
                                         PrivateRoutes?.map((route, index) =>
                                             <Route

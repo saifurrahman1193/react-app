@@ -1,18 +1,20 @@
 .private-layout .ant-layout-header,
-.private-layout .ant-layout-footer {
+.private-layout .ant-layout-content{
     // color: #fff;
     background: #F9F9FB;
     padding-inline-start: 20px;
 }
 
-// .private-layout .ant-layout-footer {
-//     line-height: 1.5;
-// }
+.private-layout .ant-layout-footer {
+    margin-left: 0px;
+    padding-inline-start: 20px;
+    line-height: 0.2;
+}
 
 .private-layout .ant-layout-sider {
     color: #fff;
     // line-height: 120px;
-    background: #3ba0e9;
+    background: #F9F9FB;
 }
 
 .private-layout .ant-layout-content {

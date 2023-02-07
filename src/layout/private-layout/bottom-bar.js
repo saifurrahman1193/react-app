@@ -6,7 +6,7 @@ const { Footer } = Layout;
 
 function BottomBar() {
     return (
-        <Footer >
+        <Footer style={{ marginLeft: 200}}>
             <span>Copyright &copy; {getCurrentYear()} | Software Shop Limited | All Rights Reserved.</span>
         </Footer>
     )

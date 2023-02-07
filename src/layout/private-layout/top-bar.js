@@ -8,7 +8,6 @@ import { AuthContext } from 'context/auth-context'
 import { Dropdown } from 'antd';
 import { Link } from 'react-router-dom';
 import Cookies from 'js-cookie';
-import BreadCrumb from 'component/common/BreadCrumb';
 
 const { Header } = Layout;
 
@@ -77,7 +76,6 @@ function TopBar() {
 
 
                 </Header>
-            <BreadCrumb />
         </>
     )
 }
