@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { HomeOutlined, SafetyOutlined } from '@ant-design/icons';
-import { Menu, Layout } from 'antd';
+import { Menu, Layout, Affix } from 'antd';
 import { Link } from "react-router-dom";
 import { AuthContext } from 'context/auth-context'
 import { PrivateLayoutContext } from 'context/private-layout-context'
@@ -78,7 +78,8 @@ function LeftSideBar() {
     return (
         <Sider trigger={null} collapsible collapsed={leftSideBarCollapsed} >
 
-            {/* This menu is designed to be used for displaying 3 levels */}
+            {/* <Affix offsetTop={0}> */}
+                {/* This menu is designed to be used for displaying 3 levels */}
             <Menu
                 onClick={(e) => onClick(e)}
                 style={{
@@ -131,8 +132,10 @@ function LeftSideBar() {
                 }
             >
 
-
             </Menu>
+            {/* </Affix> */}
+
+
 
         </Sider>
     )

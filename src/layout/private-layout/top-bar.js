@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { MenuUnfoldOutlined, MenuFoldOutlined, UserOutlined, LogoutOutlined, ToolOutlined } from '@ant-design/icons';
-import { Layout } from "antd";
+import { Layout, Affix } from "antd";
 import { PrivateLayoutContext } from 'context/private-layout-context'
 import { Avatar } from 'antd';
 import { Col, Row, Space } from 'antd';
@@ -47,36 +47,38 @@ function TopBar() {
 
     return (
         <>
-            <Header>
-                <Row>
-                    <Col span={1}>
-                        {React.createElement(leftSideBarCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
-                            className: 'trigger m-0 p-0',
-                            onClick: () => setLeftSideBarCollapsed(!leftSideBarCollapsed),
-                        })}
-                    </Col>
-                    <Col span={23}>
-                        <Row justify="end">
-                            <Dropdown menu={{ items }}>
-                                <a onClick={(e) => e.preventDefault()} href='!#'>
-                                    <Space>
+            <Affix offsetTop={0}>
+                <Header>
+                    <Row>
+                        <Col span={1}>
+                            {React.createElement(leftSideBarCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
+                                className: 'trigger m-0 p-0',
+                                onClick: () => setLeftSideBarCollapsed(!leftSideBarCollapsed),
+                            })}
+                        </Col>
+                        <Col span={23}>
+                            <Row justify="end">
+                                <Dropdown menu={{ items }}>
+                                    <a onClick={(e) => e.preventDefault()} href='!#'>
+                                        <Space>
 
-                                        <span>{user?.name}</span>
-                                        <Avatar
-                                            style={{
-                                                backgroundColor: '#87d068',
-                                            }}
-                                            icon={<UserOutlined />}
-                                        />
-                                    </Space>
-                                </a>
-                            </Dropdown>
-                        </Row>
-                    </Col>
-                </Row>
+                                            <span>{user?.name}</span>
+                                            <Avatar
+                                                style={{
+                                                    backgroundColor: '#87d068',
+                                                }}
+                                                icon={<UserOutlined />}
+                                            />
+                                        </Space>
+                                    </a>
+                                </Dropdown>
+                            </Row>
+                        </Col>
+                    </Row>
 
 
-            </Header>
+                </Header>
+            </Affix>
             <BreadCrumb />
         </>
     )

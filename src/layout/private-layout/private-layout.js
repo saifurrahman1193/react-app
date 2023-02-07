@@ -3,7 +3,7 @@ import { Routes, Route, Outlet } from 'react-router-dom'
 import PrivateRoutes from 'route/private-routes'
 import Cookies from 'js-cookie';
 import AuthContextProvider from 'context/auth-context';
-import { Layout } from "antd";
+import {  Layout, FloatButton } from "antd";
 import PrivateLayoutContextProvider from 'context/private-layout-context';
 const TopBar = lazy(() => import('./top-bar'))
 const LeftSideBar = lazy(() => import('./left-side-bar'))
@@ -49,6 +49,7 @@ function PrivateLayout() {
                         </Layout>
                     </Layout>
                 </Layout>
+                <FloatButton.BackTop visibilityHeight={0} />
             </PrivateLayoutContextProvider>
         </AuthContextProvider>
     )
