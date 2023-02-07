@@ -31,9 +31,7 @@ function PrivateLayout() {
         <AuthContextProvider>
             <PrivateLayoutContextProvider>
                 <Layout className='private-layout'>
-                    <Affix offsetTop={0}>
-                        <TopBar />
-                    </Affix>
+                    <TopBar />
                     <Layout>
                         <LeftSideBar />  {/* <Sider> -> <Menu> */}
                         <Layout>
