@@ -45,7 +45,7 @@ function TopBar() {
 
 
     return (
-        <Affix offsetTop={0}>
+        // <Affix offsetTop={0}>
             <Header>
                 <Row>
                     <Col span={1}>
@@ -74,7 +74,7 @@ function TopBar() {
                     </Col>
                 </Row>
             </Header>
-        </Affix>
+        // </Affix>
     )
 }
 

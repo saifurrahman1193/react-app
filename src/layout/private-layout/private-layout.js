@@ -3,8 +3,8 @@ import { Routes, Route, Outlet } from 'react-router-dom'
 import PrivateRoutes from 'route/private-routes'
 import Cookies from 'js-cookie';
 import AuthContextProvider from 'context/auth-context';
-import {  Layout, FloatButton, Affix } from "antd";
-import PrivateLayoutContextProvider from 'context/private-layout-context';
+import {  Layout, FloatButton } from "antd";
+import PrivateLayoutContextProvider, { PrivateLayoutContext }  from 'context/private-layout-context';
 import BreadCrumb from 'component/common/BreadCrumb';
 
 
@@ -35,7 +35,7 @@ function PrivateLayout() {
                     <Layout>
                         <LeftSideBar />  {/* <Sider> -> <Menu> */}
                         <Layout>
-                            <Content style={{ marginLeft: 200}}>
+                            <Content>
                                 <BreadCrumb />
 
                                 {/* <Outlet /> */}
@@ -51,7 +51,7 @@ function PrivateLayout() {
                                     }
                                 </Routes>
                             </Content>
-                            <BottomBar />
+                    <BottomBar />
                         </Layout>
                     </Layout>
                 </Layout>

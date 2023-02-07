@@ -76,7 +76,7 @@ function LeftSideBar() {
 
 
     return (
-        <Sider trigger={null} collapsible collapsed={leftSideBarCollapsed} style={{ position: 'fixed', left: 0, top: 64, bottom: 0 }}>
+        <Sider trigger={null} collapsible collapsed={leftSideBarCollapsed}>
 
             {/* <Affix offsetTop={0}> */}
                 {/* This menu is designed to be used for displaying 3 levels */}
