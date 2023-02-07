@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { MenuUnfoldOutlined, MenuFoldOutlined, UserOutlined, LogoutOutlined, ToolOutlined } from '@ant-design/icons';
-import { Layout, Affix } from "antd";
+import { Layout } from "antd";
 import { PrivateLayoutContext } from 'context/private-layout-context'
 import { Avatar } from 'antd';
 import { Col, Row, Space } from 'antd';
@@ -47,7 +47,6 @@ function TopBar() {
 
     return (
         <>
-            <Affix offsetTop={0}>
                 <Header>
                     <Row>
                         <Col span={1}>
@@ -78,7 +77,6 @@ function TopBar() {
 
 
                 </Header>
-            </Affix>
             <BreadCrumb />
         </>
     )
